@@ -23,14 +23,14 @@ const ITEMS = [
     label: "INSTAGRAM",
     icon: "📷",
     barIcon: "/images/icon1.png",
-    href: "https://www.instagram.com/prig.hts",
-    handle: "@prig.hts",
+    href: "https://www.instagram.com/akmal_hoetomo?igsh=bGR5dWFnZ2Uzazc2",
+    handle: "@akmal_hoetomo",
     stats: [
       { tag: "FOL", value: "—", color: "#e1306c" },
       { tag: "PST", value: "—", color: "#f77737" },
     ],
     links: [
-      { label: "PROFILE", url: "https://www.instagram.com/prig.hts?igsh=cWkzdDZidGFwczIy" },
+      { label: "PROFILE", url: "https://www.instagram.com/akmal_hoetomo?igsh=bGR5dWFnZ2Uzazc2" },
     ],
   },
   {

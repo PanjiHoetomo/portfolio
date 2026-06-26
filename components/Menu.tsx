@@ -136,6 +136,13 @@ export default function Menu() {
     setTimeout(() => setIsTransitioning(false), unmountDelay);
   };
 
+  const handleBack = () => {
+    const sfx = new Audio("/sfx/closeSfx.wav");
+    sfx.volume = 0.85;
+    sfx.play().catch(() => {});
+    transitionTo("menu", true);
+  };
+
   /* ---------------- KEYBOARD ---------------- */
 
   useEffect(() => {
@@ -144,10 +151,7 @@ export default function Menu() {
     const handleKeyDown = (e: KeyboardEvent) => {
 
       if (e.key === "Escape" && currentScreen !== "menu") {
-        const sfx = new Audio("/sfx/closeSfx.wav");
-        sfx.volume = 0.85;
-        sfx.play().catch(() => {});
-        transitionTo("menu", true);
+        handleBack();
         return;
       }
 
@@ -411,6 +415,58 @@ export default function Menu() {
           {currentScreen === "github"  && <Github />}
           {currentScreen === "socials"   && <Socials />}
           {currentScreen === "sideproj"  && <SideProjects />}
+
+          {/* BACK BUTTON OVERLAY */}
+          {currentScreen !== "menu" && (
+            <motion.button
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ delay: 0.5, duration: 0.3 }}
+              onClick={handleBack}
+              onMouseEnter={playNavigationSfx}
+              className="fixed bottom-6 left-6 z-[100] flex items-center gap-3 cursor-pointer select-none border-none bg-transparent p-0 animate-fade-in"
+            >
+              {/* ESC KEY BADGE */}
+              <div
+                style={{
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: 14,
+                  letterSpacing: 1,
+                  background: "#fff",
+                  color: "#000",
+                  padding: "2px 8px",
+                  transform: "skewX(-15deg)",
+                  boxShadow: "2px 2px 0 rgba(0,0,0,0.8)",
+                  fontWeight: "bold",
+                }}
+              >
+                ESC
+              </div>
+
+              {/* BACK TEXT LABEL */}
+              <motion.div
+                whileHover={{ scale: 1.05, x: 2 }}
+                whileTap={{ scale: 0.95 }}
+                style={{
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: 22,
+                  letterSpacing: 2,
+                  background: "#e61c23", // Persona Red
+                  color: "#fff",
+                  padding: "6px 20px",
+                  transform: "skewX(-15deg)",
+                  boxShadow: "3px 3px 0 rgba(0,0,0,0.8)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                }}
+              >
+                <span>◄</span>
+                <span>BACK</span>
+              </motion.div>
+            </motion.button>
+          )}
 
           {/* TRANSITION — key forces remount when variant changes */}
           {isTransitioning && (

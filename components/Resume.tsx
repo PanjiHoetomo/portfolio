@@ -17,31 +17,29 @@ const SUMMARY_PANELS = [
   {
     index: "01", title: "EDUCATION LOG", progress: "UCC",
     rows: [
-      { index: "01", title: "BSc Computer Science — UCC",       status: "Complete"  },
-      { index: "02", title: "AWS Solutions Architect Associate", status: "Certified" },
-      { index: "03", title: "Microsoft Azure Fundamentals",      status: "Certified" },
-      { index: "04", title: "ISTQB Certified Tester Foundation", status: "Certified" },
+      { index: "01", title: "D3 Teknik Informatika — Politeknik Negeri Cilacap",       status: "In progress"  },
+      { index: "02", title: "AWD Asisstant Web Developer", status: "Certified" },
+      { index: "03", title: "MikroTik Certified Network Associate (MTCNA)",      status: "Certified" },
+      { index: "04", title: "Cisco Certified Network Associate (CCNA)", status: "Certified" },
       { index: "05", title: "Java SE 8 Programmer — Oracle",     status: "Certified" },
     ],
     bottom: { title: "COURSEWORK", bullets: [
-      "- Data Structures & Algorithms, Operating Systems",
-      "- Artificial Intelligence, Software Engineering",
-      "- Cloud Computing, Networking, Functional Programming",
+      "- Object Oriented Programming",
+      "- Database",
+      "- Framework Programming",
     ]},
   },
   {
     index: "02", title: "SKILL TREE", progress: "MAX",
     rows: [
-      { index: "BE", title: "Java · Spring Boot · Python · Node · Kafka", status: "Expert" },
-      { index: "FE", title: "TypeScript · Angular · JavaScript",           status: "Expert" },
-      { index: "DB", title: "MongoDB · NoSQL · SQL",                       status: "Strong" },
-      { index: "CL", title: "AWS · Azure · Docker · Microservices",        status: "Strong" },
-      { index: "QA", title: "Jest · JUnit · Integration · E2E Testing",    status: "Strong" },
+      { index: "BE", title: "PHP · Laravel · MySQL", status: "Strong" },
+      { index: "FE", title: "HTML · CSS · Bootstrap · Tailwind",           status: "Strong" },
+      { index: "DB", title: "MySQL",                       status: "Strong" },
+
     ],
     bottom: { title: "ALSO PROFICIENT IN", bullets: [
       "- LangGraph · Langfuse · Weaviate · RAG / Vector Search",
       "- Git · Agile · Jira · CI/CD Pipelines",
-      "- OOP · Distributed Systems · Full-Stack Architecture",
     ]},
   },
   {
@@ -59,7 +57,7 @@ const SUMMARY_PANELS = [
   {
     index: "04", title: "EXPERIENCE LOG", progress: "4",
     rows: [
-      { index: "01", title: "Senior Systems Engineer — Mphasis HPE", status: "Current" },
+      { index: "01", title: "PROTIC (Programming Technology Informatics Club)", status: "Current" },
       { index: "02", title: "Freelance Software Developer",           status: "2yr"     },
       { index: "03", title: "Associate Consultant — Version1",        status: "1yr"     },
       { index: "04", title: "Software Eng Intern — McAfee",           status: "6mo"     },
@@ -78,20 +76,20 @@ const EXPANDED_PANELS = [
     title: "EDUCATION — FULL DETAIL",
     sections: [
       {
-        heading: "BSc Computer Science — University College Cork",
-        date: "08/2018 – 11/2022",
+        heading: "D3 Teknik Informatika — Politeknik Negeri Cilacap",
+        date: "09/2024 – 06/2027",
         bullets: [
-          "Major in Computer Science",
-          "Relevant coursework: Data Structures & Algorithms, Operating Systems, Artificial Intelligence, Software Engineering, OOP, Cloud Computing, Networking, Functional Programming",
+          "Major in Teknik Informatika",
+          "Relevant coursework: Object Oriented Programming, Database, Framework Programming, Networking, Software Engineering, Functional Programming, Mobile Programming",
         ],
       },
       {
         heading: "CERTIFICATIONS",
         date: "",
         bullets: [
-          "AWS Solutions Architect Associate",
-          "Microsoft Azure Fundamentals",
-          "ISTQB Certified Tester Foundation",
+          "AWD Asisstant Web Developer",
+          "MikroTik Certified Network Associate (MTCNA)",
+          "Cisco Certified Network Associate (CCNA)",
           "Java SE 8 Programmer — Oracle Certified Associate",
         ],
       },
